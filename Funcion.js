@@ -1,37 +1,32 @@
 
-función  saludar()  {
-    return  'hola'
+función  saludar ( )  {
+    volver  'hola'
 }
 
 saludar ( )
-consola.log(saludar())
+consola . log ( saludar ( ) )
+
+// funciones anonimas
+
+var  funcionAnonima  =  function  ()  {
+    return  'funcion anonima'
+}
+consola . log ( funcionAnonima ( ) )
 
 
-var funcionAninima = function(a,b){
-return 'funcion aninimal'
-
-
+// funciones flecha función grasa
+var  funcionFechaGorda  =  ( a ,  b )  =>  {
+    devuelve  a  +  b ;
 }
 
-console.log(funcionAninima())
+consola . log ( funcionFechaGorda ( 'a' ,  {  a : 1  } ) ) ;
 
-var funcionfechagorda = (a, b) => {
-
-    return a+b;
-}
-console.log(funcionfechagorda('a', {a:1}));
-
-
-var json ={ 
-
-    suma: (a, b) => {
-
-        return a +b; 
-
+var  json  =  {
+    suma : ( a ,  b )  =>  {
+        devuelve  a  +  b ;
     }
 }
-
-console.log(json.suma(1,3));
+consola . log ( json . suma ( 1 , 2 ) ) ;
 
 
 
