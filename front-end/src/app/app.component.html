@@ -532,3 +532,43 @@
 
 
 <router-outlet></router-outlet>
+
+
+<h1>TITULO</h1>
+
+<p>Listas no ordenada</p>
+
+<ul>
+  <li>opcion</li>
+  <li>opcion</li>
+ 
+</ul>
+
+<p>Listas ordenada ol </p>
+
+<ol>
+  <li>opcion</li>
+  <li>opcion</li>
+ 
+</ol>
+
+
+<img src="https://media.informabtl.com/wp-content/uploads/2018/10/Armin-Van-Buuren-.jpg"
+alt="200" sizes="200" width="200"
+>
+
+<app-mi-primer-componente
+
+  [titulo]="tituloPadre"
+  [nombreBoton]="nombreBotonPadre"
+  [imagenPath]="imagenPadre"
+  [datos]="datosHijo">
+  (saludoHijo)="obtenerRespuestaHjo($event)"
+</app-mi-primer-componente>
+  
+
+
+
+
+
+
