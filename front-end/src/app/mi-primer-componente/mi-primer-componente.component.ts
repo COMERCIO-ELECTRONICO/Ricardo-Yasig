@@ -18,7 +18,15 @@ export class MiPrimerComponenteComponent implements OnInit {
 
   ngOnInit(): void {
 
+
+    console.log(this.datos);
+    console.log('datos del padre')
+
   }
+
+fecha  = new Date();
+sueldo : number = 500;
+nombre : string = 'david';
 
   SALUDAR() {
     alert('holaaaaaa');
