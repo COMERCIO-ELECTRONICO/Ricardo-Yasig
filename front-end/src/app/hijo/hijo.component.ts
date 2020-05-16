@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { EADDRNOTAVAIL } from 'constants';
 
 @Component({
   selector: 'app-hijo',
@@ -17,5 +18,13 @@ export class HijoComponent implements OnInit {
   alertaValorPadre() {
     alert(this.valorDelPadre)
   }
+
+
+@Input() men: string;
+  mensaje() {
+    alert(this.men)
+    
+  }
+ 
 
 }

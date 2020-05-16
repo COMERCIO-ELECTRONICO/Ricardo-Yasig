@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'front-end';
   
-  tituloPadre = 'soy tu padre hola';
+  tituloPadre = new Date();
   nombreBotonPadre = 'alertar!!!!!!!!';
   imagenPadre = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRFM1zczz0IQAvViVhuCLh3ou6vhfFbYgLMEE1PB5nehOwfcHa2&usqp=CAU';
 

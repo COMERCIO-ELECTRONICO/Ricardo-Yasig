@@ -2,7 +2,51 @@
 <input type="text"
 [(ngModel)]="valorDelInput">
 {{valorDelInput}}
+
+
 <app-hijo
-[valorDelPadre]="valorDelInput"
+[men]="valoredad"
 >
 </app-hijo>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Calcular la Edad </h1>
+<input type="date" [(ngModel)]="age"/>
+<button type="button" (click)="ageCalculator()"> Calcular </button>
+
+ <p>Tu edad es: {{this.showAge}}</p>
+
+
+
+
+
