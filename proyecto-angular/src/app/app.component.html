@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>
+  <h1 class="titulo">
     TITULO
   </h1>
 
@@ -28,3 +28,333 @@
 </div>
 <div>
 </div>
+
+<h1>
+  DIRECTIVAS
+</h1>
+<h2>angular => ngIf</h2>
+
+<button type="button" class="btn btn-outline-success" (click)="eventoClick()">
+  Success</button>
+<p *ngIf="esconderHola">
+  hola
+</p>
+
+<h2>angular => ngfor</h2>
+{{arregloNuemros}}
+<li *ngFor="let numero of arregloNuemros">
+  <ul> {{numero.nombre}} </ul>
+</li>
+
+<h1>
+  emmet
+</h1>
+*3
++
+>
+.clase
+<div class="titulo"></div>
+
+<div class="row titulo"></div>
+
+<div class="nombreClase">
+</div>
+
+<div class="row">
+  <div class="col-sm-12"></div>
+  <div class="col-sm-6"></div>
+  <div class="col-sm-3"></div>
+  <div class="col-sm-3"></div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12"></div>
+  <div class="col-sm-6"></div>
+  <div class="col-sm-3"></div>
+  <div class="col-sm-3"></div>
+</div>
+
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </li>
+</ul>
+
+<div class="row" style="background-color: #00aca2;">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-1">
+    ANT
+  </div>
+  <div class="col-sm-1">Servicios</div>
+  <div class="col-sm-1">Programas</div>
+  <div class="col-sm-1">Regulacion</div>
+  <div class="col-sm-1">No</div>
+  <div class="col-sm-1">Trans</div>
+  <div class="col-sm-1">Res</div>
+  <div class="col-sm-1">Trasn</div>
+  <div class="col-sm-1">Const</div>
+  <div class="col-sm-1"></div>
+  <div class="col-sm-1"></div>
+</div>
+<div>
+  estoy es codigo
+</div>
+
+<div>
+  estoy es otro codigo
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<h1>DEBER PÁGINA</h1>
+
+
+<div class="container">
+
+   <div class="row">
+      <div class="col-sm-8">  
+          <img sizes="100%" width="auto"  src="data:image/png;base64,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"> 
+
+      </div>
+    
+      
+      <div class="col-sm-4">  
+        <nav class="navbar navbar-dark default-color justify-content-between">
+          
+          <form class="form-inline my-1">
+            <div class="md-form form-sm my-0">
+              <input class="form-control form-control-sm mr-sm-2 mb-0" type="text" placeholder="Search"
+                aria-label="Search">
+            </div>
+            <button class="btn btn-outline-white btn-sm my-0" type="submit" style="background-color: #2E5691;"><a style="color: white;">  BUSCAR </a></button>
+          </form>
+        </nav>
+       
+        </div>
+        
+
+    </div>
+
+  <div class="col-sm-12">
+     <div style= "background-color:#2E5691" >
+      <nav class="navbar navbar-expand-lg navbar-light bg-right">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" style="color: white;">
+              <a class="nav-link" href="#" style="color: white;">INICIO<span class="sr-only">(current)</span></a>
+            </li>
+           
+            <li class="nav-item dropdown" style= "background-color:#2E5691" >
+              <a class="nav-link dropdown-toggle" style="color: white;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                MUNICIPIO
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#" style="color:black;">Consejo Metro-politano</a>
+                <a class="dropdown-item" href="#" style="color: black;">Convocatoria Concursos</a>
+                <div class="dropdown-divider" style="color: black"> Ordenanzas y Relaciones</div>
+                <a class="dropdown-item" href="#" style="color: black;">Anuncios</a>
+              </div>
+            </li>
+      
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white;">SERVICIO CIUDADANOS</a>
+            </li>
+      
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white;">TURISMO</a>
+            </li>
+      
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white;">NOTICIAS</a>
+            </li>
+      
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="color: white;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                QUITO POR TEMAS
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                <a class="dropdown-item" href="#" style="color: black">Servicios Ciudadanos</a>
+                <a class="dropdown-item" href="#" style="color: black">Turismo</a>
+                <div class="dropdown-divider" style="color: black;"></div>
+                <a class="dropdown-item" href="#" style="color:black">Noticias</a>
+              </div>
+            </li>
+               <li class="nav-item">
+              <a class="nav-link disabled" href="#" style="color: white;">TRANSPARENCIA</a>
+            </li>
+          </ul>
+         
+        </div>
+      </nav>
+      </div>
+
+<div class="row">
+      <div class="col-sm-6">  
+          <img   width="100%; " height="auto"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRdYj8dNqzcUUIRYWo2-L9Z85qPkUAkMms3I4f_kKzIRRwig3Ib&usqp=CAU">
+
+      </div>
+    
+      
+      <div class="col-sm-6">  
+        <img   width="100%; " height="auto"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRc2BvIGnvJ1xdpGcrSvmm8hXFVi8Le9O5eTUv8ZK5cT6s5kStY&usqp=CAU">
+        </div>
+
+
+    </div>
+
+<div class="container">
+  <div class="row" >
+    <div class="col-7" style="background-color: #2E5691;"> <a style="color: white;"> INFORMATE</a>
+        <div class="col-4">
+
+          <nav class = "">
+            <div class = "container-fluid">
+              <ul class = "nav navbar-nav">
+                <li style="color: white;"> <a href="#"></a> </li>
+    
+    
+                <li> <a href="#" style="color: white;">SERVICIO DE CONSEJO</a> </li>
+                <li> <a href="#" style="color: white;">AGENDA DE EVENTOS </a> </li>
+             
+              </ul>
+            </div>
+          </nav>
+        </div>
+          </div>
+
+
+
+      <div class="col-1" style="background-color: white;"> <a style="color: white;"> </a>
+      </div>
+
+      
+      <div class="col-4" style="background-color: #2E5691;"> <a style="color: white; text-align: center;" > SERVICIOS</a>
+        
+        <nav class = "">
+          <div class = "container-fluid">
+            <ul class = "nav navbar-nav">
+              <li style="color: white;"> <a href="#"></a> </li>
+
+
+              <li> <a href="#" style="color: white;">PORTAL</a> </li>
+              <li> <a href="#" style="color: white;">SISTEMA </a> </li>
+              <li> <a href="#" style="color: white;">GOBIERNO</a> </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+</div><br>
+
+
+
+<!--  seccion ultima-->
+
+
+<div class="container">
+
+  
+    <div class="row">
+      
+      <div class="col-sm-3">
+               <img sizes="100%" width="auto" src="https://www.quito.gob.ec/images/c/rotativo/bottom/rendicion_cuentas2019.png">
+      </div>
+      <div class="col-sm-3">
+            
+        <img sizes="100%" width="auto"  src="https://www.quito.gob.ec/images/c/rotativo/bottom/quito-sitioseguro.png">
+      </div>
+
+      <div class="col-sm-3">
+
+        <img sizes="100%" width="auto"  src="https://www.quito.gob.ec/images/c/rotativo/bottom/quito_participacionc.png">
+
+      </div>
+
+      <div class="col-sm-3">
+        <img sizes="100%" width="auto"  src="https://www.quito.gob.ec/images/c/rotativo/bottom/quito-biciq.png">
+      </div>
+     
+    </div>
+
+
+
+</div>
+
+
+
+<div class="row">
+  <div class="col-sm-12">  
+     <!-- <img   width="100%; " height="auto"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRdYj8dNqzcUUIRYWo2-L9Z85qPkUAkMms3I4f_kKzIRRwig3Ib&usqp=CAU"> -->
+
+  </div>
+
+
+
+
+
+
+
+    
+    </div>
+   
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
