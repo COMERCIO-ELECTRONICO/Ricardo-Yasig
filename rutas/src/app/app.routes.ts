@@ -5,7 +5,6 @@ import { NgModule } from "@angular/core";
 import {NoEncontradoComponent} from "./inicio/no-encontrado/no-encontrado.component";
 
 
-
 const rutas: Routes = [
     {
         path: 'inicio',
@@ -20,6 +19,13 @@ const rutas: Routes = [
         loadChildren: ()=>import('./usuario/usuario.module')
         .then(usuario=>usuario.UsuarioModule)
     },
+    {
+        path: 'pokemon',
+        loadChildren: ()=>import('./pokemon/pokemon.module')
+        .then(poke=>poke.PokemonModule)
+    },
+
+
     {
         path: '',
         redirectTo: 'inicio',

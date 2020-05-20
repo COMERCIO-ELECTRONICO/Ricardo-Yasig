@@ -8,6 +8,7 @@ import { HomeComponent } from './inicio/home/home.component';
 import { NoEncontradoComponent } from './inicio/no-encontrado/no-encontrado.component';
 import {AppRoutesComponent} from './app.routes';
 import { UsuarioModule } from './usuario/usuario.module';
+import { PokemonModule } from './pokemon/pokemon.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { UsuarioModule } from './usuario/usuario.module';
     BrowserModule,
     AppRoutesComponent,
     AppRoutingModule,
-    UsuarioModule
+    UsuarioModule,
+    PokemonModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
