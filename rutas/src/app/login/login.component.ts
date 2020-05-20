@@ -12,4 +12,18 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  email = '';
+  contrasena = '';
+
+  obtenerFormulario(formulario) {
+    console.log(formulario);
+    alert(
+      'correo: ' +
+        formulario.controls.email.value +
+        'password: ' +
+        formulario.controls.contrasena.value
+    );
+  }
+
+
 }

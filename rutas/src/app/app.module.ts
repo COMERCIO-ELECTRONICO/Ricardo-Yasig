@@ -9,6 +9,7 @@ import { NoEncontradoComponent } from './inicio/no-encontrado/no-encontrado.comp
 import {AppRoutesComponent} from './app.routes';
 import { UsuarioModule } from './usuario/usuario.module';
 import { PokemonModule } from './pokemon/pokemon.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PokemonModule } from './pokemon/pokemon.module';
     AppRoutesComponent,
     AppRoutingModule,
     UsuarioModule,
-    PokemonModule
+    PokemonModule,
+    FormsModule
 
   ],
   providers: [],

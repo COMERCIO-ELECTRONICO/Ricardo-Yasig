@@ -5,38 +5,39 @@ import { NgModule } from "@angular/core";
 import {NoEncontradoComponent} from "./inicio/no-encontrado/no-encontrado.component";
 
 
+
 const rutas: Routes = [
-    {
-        path: 'inicio',
-        component: HomeComponent
-    },
-    {
-        path: 'login',
-        component: LoginComponent
-    },
-    {
-        path: 'usuario',
-        loadChildren: ()=>import('./usuario/usuario.module')
-        .then(usuario=>usuario.UsuarioModule)
-    },
-    {
-        path: 'pokemon',
-        loadChildren: ()=>import('./pokemon/pokemon.module')
-        .then(poke=>poke.PokemonModule)
-    },
-
 
     {
-        path: '',
-        redirectTo: 'inicio',
-        pathMatch: 'full'
+        path: ':id/inicio',
+        component: HomeComponent,
+      },
+    {
+      path: 'inicio',
+      component: HomeComponent,
+    },
+    
+    {
+      path: 'login',
+      component: LoginComponent,
     },
     {
-        path: '**',
-        component: NoEncontradoComponent
-    }
-];
-
+      path: 'usuario',
+      loadChildren: () =>
+        import('./usuario/usuario.module').then(
+          (usuario) => usuario.UsuarioModule
+        ),
+    },
+    {
+      path: '',
+      redirectTo: 'inicio',
+      pathMatch: 'full',
+    },
+    {
+      path: '**',
+      component: NoEncontradoComponent,
+    },
+  ];
 @NgModule({
     imports: [RouterModule.forRoot(rutas)],
     providers: [],
