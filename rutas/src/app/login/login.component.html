@@ -224,6 +224,17 @@
     </div>
 
 
+
+    <div
+    class="alert alert-danger"
+    role="alert"
+    *ngIf="(passs.dirty===true)&& vpasss.value !== passs.value"
+    >
+    <p>
+        passs no son iguales.
+      </p>
+    </div>
+
   
 
     <button
