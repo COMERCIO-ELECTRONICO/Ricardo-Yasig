@@ -82,8 +82,6 @@
         required
         #campoContrasena="ngModel">
     </div>
-
-
     <button
     [disabled]="formularioUsario.invalid"
     type="submit"
@@ -92,3 +90,156 @@
   </form>
 
 </div>
+
+
+<h1>Formulario de Registro</h1>
+
+
+
+
+<div class="container">
+<form (ngSubmit)="obtenUser(formuUsario)" #formuUsario="ngForm">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputfirtname">Primer Nombre</label>
+
+        <input type="text" class="form-control" id="Pname"
+        [(ngModel)]="Pnombre"
+        name="Pnombre"
+        placeholder="David"
+        minlength="3"
+        required
+        #campoName="ngModel"
+        >
+
+     
+
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputsecondname">Second Name</label>
+
+
+        <input type="text" class="form-control" id="Sname"
+        [(ngModel)]="Snombre"
+        name="Snombre"
+        placeholder="José"
+        required
+        #campoNames="ngModel"
+        >
+
+
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">password</label>
+
+      <input type="password" class="form-control" id="pass1" placeholder="******" 
+      [(ngModel)]="pass"
+      name="pass"
+      placeholder="****"
+      minlength="4"
+      required
+      #passs="ngModel"
+            
+      >
+    </div>
+    <div class="form-group">
+      <label for="inputAddress2">verifica password</label>
+      <input type="password" class="form-control" id="pass2" placeholder="******"
+      [(ngModel)]="vpass"
+      name="vpass"
+      placeholder="****"
+      minlength="4"
+      required
+      #vpasss="ngModel"
+      >
+    </div>
+   
+
+    <div
+    class="alert alert-danger"
+    role="alert"
+    *ngIf="(campoName.errors)
+    && campoName.dirty === true"
+    >
+    <p
+      *ngIf="campoName.errors.required">
+        Campo nombre es requerido
+      </p>
+      <p
+      *ngIf="campoName.errors.minlength">
+        ingresa 4 letras
+      </p>
+    </div>
+
+
+    <div
+    class="alert alert-danger"
+    role="alert"
+    *ngIf="(campoNames.errors)
+    && campoNames.dirty === true"
+    >
+    <p
+      *ngIf="campoNames.errors.required">
+        Campo requerido
+      </p>
+      <p
+      *ngIf="campoNames.errors.minlength">
+        ingresa 4 letras
+      </p>
+    </div>
+
+
+
+    <div
+    class="alert alert-danger"
+    role="alert"
+    *ngIf="(passs.errors)
+    && passs.dirty === true"
+    >
+    <p
+      *ngIf="passs.errors.required">
+        Campo pass es requerido
+      </p>
+      <p
+      *ngIf="passs.errors.minlength">
+        ingresa 4 letras
+      </p>
+    </div>
+
+    <div
+    class="alert alert-danger"
+    role="alert"
+    *ngIf="(vpasss.errors)
+    && vpasss.dirty === true"
+    >
+    <p
+      *ngIf="vpasss.errors.required">
+        Campo verifica pass es requerido
+      </p>
+      <p
+      *ngIf="vpasss.errors.minlength">
+        ingresa 4 letras
+      </p>
+    </div>
+
+
+  
+
+    <button
+    [disabled]="formuUsario.invalid"
+      type="submit"
+      class="btn btn-primary">
+      Submit</button>
+ </form>
+
+</div>
+
+
+
+
+
+
+
+
+
