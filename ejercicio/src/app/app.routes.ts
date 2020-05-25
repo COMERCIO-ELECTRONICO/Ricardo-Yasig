@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
 import { LoginComponent } from './login/login.component';
+import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 
 const rutas: Routes = [
   {
@@ -18,6 +19,11 @@ const rutas: Routes = [
     path: 'login',
     component: LoginComponent,
   },
+  {
+    path: 'estudiante/perfil',
+    component: PerfilUsuarioComponent,
+  },
+  
   {
     path: '',
     redirectTo: 'inicio',
