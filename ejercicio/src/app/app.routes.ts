@@ -23,7 +23,10 @@ const rutas: Routes = [
     path: 'estudiante/perfil',
     component: PerfilUsuarioComponent,
   },
-  
+  {
+    path: 'Profesor/perfil',
+    component: PerfilUsuarioComponent,
+  },
   {
     path: '',
     redirectTo: 'inicio',
