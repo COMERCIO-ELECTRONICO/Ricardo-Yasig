@@ -1,3 +1,4 @@
+  
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/Router';
 import { HomeComponent } from './home/home.component';
@@ -16,16 +17,22 @@ const rutas: Routes = [
     component: IniciarSesionComponent,
   },
   {
-    path: 'login',
-    component: LoginComponent,
-  },
-  {
     path: 'estudiante/perfil',
     component: PerfilUsuarioComponent,
   },
   {
     path: 'Profesor/perfil',
     component: PerfilUsuarioComponent,
+  },
+  {
+    path: 'usuario',
+    loadChildren: () =>
+      import('./usuario/usuario.module')
+      .then(mod => mod.UsuarioModule),
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
   {
     path: '',
