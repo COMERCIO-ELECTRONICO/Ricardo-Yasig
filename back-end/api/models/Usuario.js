@@ -8,26 +8,25 @@
 module.exports = {
 
   attributes: {
-
-    nombre:{
-
-      type : 'string',
-      requered : true
+    nombre: {
+      type: 'string',
+      required: true
     },
-    correo:{
-
-      type : 'string'
+    correo: {
+      type: 'string'
     },
-    edad:{
-
-      type : 'number'
+    edad: {
+      type: 'number'
     },
     esCasado:{
+      type: 'boolean'
+    },
+    // RELACION ONE TO MANY
 
-      type : 'true'
+    mascotas:{
+      collection: 'mascota',
+      via: 'idUsuario'
     }
-
-
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
@@ -46,4 +45,3 @@ module.exports = {
   },
 
 };
-
