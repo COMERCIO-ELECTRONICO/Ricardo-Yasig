@@ -6,6 +6,7 @@ import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
 import { LoginComponent } from './login/login.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
+import { LoginGuard } from './guards/login.guard';
 
 const rutas: Routes = [
   {
@@ -31,9 +32,10 @@ const rutas: Routes = [
       .then(mod => mod.UsuarioModule),
   },
   {
-    path: 'login',
-    component: LoginComponent,
-  },
+  path: 'login',
+  component: LoginComponent,
+  canActivate: [LoginGuard]
+},
   {
     path: '',
     redirectTo: 'inicio',
