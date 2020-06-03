@@ -11,6 +11,9 @@ import { ButtonModule } from 'primeng/button';
 import { RegistroComponent } from './registro/registro.component';
 import { GamesComponent } from './games/games.component';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from "@angular/common/http";
+import { LoginService } from './services/login.service';
+import { RegisterService } from './services/register.service';
 
 @NgModule({
   declarations: [
@@ -22,8 +25,19 @@ import { FormsModule } from '@angular/forms';
     RegistroComponent,
     GamesComponent,
   ],
-  imports: [BrowserModule, AppRoutes, BrowserAnimationsModule, ButtonModule, FormsModule,],
-  providers: [],
+  imports:
+   [BrowserModule, 
+    AppRoutes, 
+    BrowserAnimationsModule,
+     ButtonModule,
+      FormsModule,
+      HttpClientModule
+    ],
+  providers: [
+    LoginService,
+    RegisterService
+
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
