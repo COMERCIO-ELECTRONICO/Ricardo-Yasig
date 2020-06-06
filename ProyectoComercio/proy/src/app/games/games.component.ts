@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RegisterService } from '../services/register.service';
+import { Router } from '@angular/Router';
 
 
 @Component({
@@ -9,40 +10,46 @@ import { RegisterService } from '../services/register.service';
 })
 export class GamesComponent implements OnInit {
 
+  string;
+
   constructor(
 
     private readonly _RegistroService: RegisterService,
+    private readonly _router: Router,
+   
   ) { }
 
   ngOnInit(): void {
+ 
+    this._RegistroService.listarpersonas('http://localhost:1337/usuarios')
+    .subscribe((ver)=>{
+
+      this.string = ver;
+
+    })
+
+
   }
 
 
-  verUsuarios(){
 
+/*editar(){
+  this._RegistroService.metodoPut('http://localhost:1337/usuarios')
+  .subscribe((edita)=>{
 
-      this._RegistroService.listarpersonas({
-    
+    this.string = edita;
+  })*/
+
+//}
+
+  eliminar(name){
+    this._RegistroService.metodoDelete((`http://localhost:1337/usuarios/${name.id}`))
+    .subscribe((datos)=>{
+
+      this.string = datos;
      
-        
-        }).subscribe(
-          (registroCreado)=> {
-            console.log('registroCreado');
-            console.log(registroCreado);
-       
-          }
-        )
-       
-  }
-
-
-
-
-
-
-
-
-
+    })
+    }
 
 
 }

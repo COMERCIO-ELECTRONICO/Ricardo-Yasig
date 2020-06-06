@@ -1,0 +1,145 @@
+
+<head>
+ 
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <!--STYLES-->
+     <!--STYLES END-->
+</head>
+
+<body>  
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
+        <a class="navbar-brand" href="/">Prodcutos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+             
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/games', 'perfil']">inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/clientes']" >Clientes</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link"  [routerLink]="['/productos']">Productos</a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link"  [routerLink]="['/login']">salir</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+
+
+      
+      
+        
+              <div class="row">
+                <div class="col">
+                  
+ <div class="col-sm-12">
+            
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                
+                  <th scope="col">Titulo</th>
+                  <th scope="col">clasificacion</th>
+                  <th scope="col">consola</th>
+                  <th scope="col">fabricante</th>
+                  <th scope="col">version</th>
+                  <th scope="col">catalogo</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let name of string">
+                
+                  <td>{{name.id}}</td>
+                  <td>{{name.titulo}}</td>
+                  <td>{{name.clasificacion}}</td>
+                  <td>{{name.consola}}</td>
+                  <td>{{name.fabricante}}</td>
+                  <td>{{name.version}}</td>
+                  <td>{{name.catalogo}}</td>
+                </tr>
+              
+              </tbody>
+            </table>
+
+
+
+
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Titulo</th>
+                  <th scope="col">clasificacion</th>
+                  <th scope="col">consola</th>
+                  <th scope="col">fabricante</th>
+                  <th scope="col">version</th>
+                  <th scope="col">Accion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let name of string">
+                  <td>{{name.id}}</td>
+                  <td>{{name.titulo}}</td>
+                  <td>{{name.clasificacion}}</td>
+                  <td>{{name.consola}}</td>
+                  <td>{{name.fabricante}}</td>
+                  <td>{{name.version}}</td>
+                  <td>{{name.catalogo}}</td>
+                </tr>
+                
+              </tbody>
+            </table>
+
+
+
+
+
+
+
+          </div>
+          </div>
+
+                <div class="col">
+                 
+
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+
+
+
+
+
+                </div>
+           
+
+
+
+

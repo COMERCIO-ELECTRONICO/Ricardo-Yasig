@@ -32,3 +32,4 @@ listarpersonas(daotosCrdencialesCrear){
   return this._httpClient.get(url, daotosCrdencialesCrear);
   }
 }
+

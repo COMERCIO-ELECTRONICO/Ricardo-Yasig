@@ -10,10 +10,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import { RegistroComponent } from './registro/registro.component';
 import { GamesComponent } from './games/games.component';
+
+
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 import { LoginService } from './services/login.service';
 import { RegisterService } from './services/register.service';
+import { clienteService } from './services/cliente.service';
+import { ProducService} from './services/pro.service';
+
+
+
+import { ClientesComponent } from './clientes/clientes.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
+import { ProductoComponent } from './producto/producto.component';
+import { EditaCliComponent } from './edita-cli/edita-cli.component';
+
+
 
 @NgModule({
   declarations: [
@@ -24,6 +37,12 @@ import { RegisterService } from './services/register.service';
     LoginComponent,
     RegistroComponent,
     GamesComponent,
+    ClientesComponent,
+    NosotrosComponent,
+    ProductoComponent,
+    EditaCliComponent,
+   
+ 
   ],
   imports:
    [BrowserModule, 
@@ -35,7 +54,12 @@ import { RegisterService } from './services/register.service';
     ],
   providers: [
     LoginService,
-    RegisterService
+    RegisterService,
+    
+    clienteService,
+    clienteService,
+    ProducService
+    
 
   ],
   bootstrap: [AppComponent],

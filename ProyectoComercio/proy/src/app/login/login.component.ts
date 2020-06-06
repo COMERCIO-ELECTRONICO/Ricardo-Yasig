@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/Router';
 import { LoginService } from '../services/login.service';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -20,23 +21,41 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+
+  
   ingresar(){
 
-
-if (this.pass === '1234' && this.email ==='ricardoyasig@hotmail.com') {
-
-alert('Bienvenidos !!')
-    this._router.navigate(['/games', 'perfil']);
-    // localhost:9000/estudiante/perfil
+    this._loginService.metodoGet('http://localhost:1337/usuarios?email='+this.email +'&password='+this.pass)
  
-} else {
-  alert('no ingreso');
-  this._router.navigate(['/login']);
- this.email = '';
-  this.pass = '';
-}
+    .subscribe((resultado) => {
+   
+   console.log(resultado);
+   
+  if (JSON.stringify(resultado)=='[]') {
+    
+   alert('usuario no existe, verifique !!');
+  
+   this._router.navigate(['/login']);
+this.email = '';
+this.pass ='';
 
+  }else{
+
+ if(resultado[0]["nombre"]){
+
+ }
+
+  console.log('bienvenidp');
+
+
+  alert('bienvenidos!!!')
+      this._router.navigate(['/games', 'perfil']);
+
+
+   
   }
-
+    })
+  }
 
 }

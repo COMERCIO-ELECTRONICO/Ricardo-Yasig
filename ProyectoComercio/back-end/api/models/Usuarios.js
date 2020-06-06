@@ -24,8 +24,12 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    tipousuario: { type: 'string' },
+  
 
+    idusuario:{
+      model: 'tipousuario'
+      
+    },
 
   },
 

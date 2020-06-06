@@ -5,9 +5,10 @@ import { HttpClient } from '@angular/common/http';
 export class LoginService {
   constructor(private readonly _httpClient: HttpClient) {}
 
-  metodoGet(url: string) {
-    return this._httpClient.get(url);
-  }
+    metodoGet(url: string) {
+      return this._httpClient.get(url);
+    }
+
 
   metodoPost(url: string, datos) {
     return this._httpClient.post(url, datos);
@@ -24,6 +25,8 @@ export class LoginService {
 crearCredenciales(daotosCrdencialesCrear){
 const url ='http://localhost:1337/usuario'
 return this._httpClient.post(url, daotosCrdencialesCrear);
+
+
 
 
 }

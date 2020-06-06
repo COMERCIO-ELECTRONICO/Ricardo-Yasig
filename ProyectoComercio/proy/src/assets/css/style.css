@@ -19,7 +19,7 @@ License URI:http://www.gnu.org/licenses/gpl-2.0.html
   margin-left: 20px;
 }
 .blog-title{
-  color: #385A30;
+  color: rgb(31, 156, 0);
   font-family: "Lato";
   font-variant: small-caps;
 }
@@ -122,7 +122,7 @@ float: right;
     padding:10px;
 }
 .current span{
-    color:#55CBD2;
+    color:rgb(21, 182, 21);
 
 }
 
@@ -149,7 +149,7 @@ float: right;
 body {
     font-size: 15px;
     line-height: 24px;
-    background:#F8FAFF;
+    background:rgb(248, 248, 248);
    
 }
 
@@ -162,7 +162,7 @@ a {
     -ms-transition: all .3s;
 }
 
-a:hover { color: #888; text-decoration: none; }
+a:hover { color: rgb(185, 11, 78); text-decoration: none; }
 
 strong { font-weight: bold; }
 
@@ -228,14 +228,23 @@ address {
 * ==========================================================================
 */
 .active{
-  background:#74B9B9 !important;
-  color: white;
+  color: rgb(37, 4, 49);
 }
 .navbar {
   font-weight: bold;
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 0;
+}
+.navbar {
+  background-image: url("https://downloadwap.com/thumbs3/screensavers/d/new/games/capcom_vs_marvel_heroes_megaman-131346.gif" );
+ 
+  background-position: center;
+}
+.navbar1 {
+  background-image: url("https://i.pinimg.com/originals/8e/0a/93/8e0a9311cb3f68c887d70ce7c64356e5.gif" );
+ 
+  background-position: center;
 }
 /*
 * ==========================================================================
@@ -245,7 +254,9 @@ address {
 .navbar-nav > li > a {
   padding: 10px 15px;
   margin: 5px 5px;
-  border-radius: 4px;
+  background:rgb(2, 2, 2);
+  border: 2px solid #0099CC;
+  border-radius: 6px;
 }
 /*
 * ==========================================================================
@@ -261,7 +272,6 @@ address {
   padding-top: 0px;
 }
 .side-left{
-  background:#528C7C;
   box-shadow: 3px grey;
   color: white;
   padding: 30px;
@@ -437,12 +447,16 @@ p.blog-text{
 }
 .services-section .services-header .services-header-title {
   margin-bottom: 15px;
+  color: #13d1d1;
+}
+.services-header-body{
+  color: #fcff48;
 }
 .services-section .services-row-tail {
   margin-top: 50px;
 }
 .services-section .services-icon {
-  color: #1bbd9b;
+  color: #2ebd1b;
   margin-bottom: 30px;
 }
 .services-section .services-title {
@@ -466,19 +480,55 @@ p.blog-text{
 .services-icon .fa:hover{
     padding: 0 10px 0 10px;
     color: white;
-    background: #1BBD9B;
+    background: rgb(32, 189, 27);
     border-radius: 3px; 
     transition:.4s;  
 }
 .services-group{
   padding: 10px;
-  background:#061F20;
+  background:rgb(24, 8, 99);
   color: white;
+}
+.services-group0{
+  padding: 10px;
+  color: white;
+  margin:auto;
+  text-align:center;
+  background-image:url("https://i.pinimg.com/originals/8e/0a/93/8e0a9311cb3f68c887d70ce7c64356e5.gif");
+}
+.services-group1{
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  margin:auto;
+  text-align:center;
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(95,89,121,1) 46%, rgba(0,212,255,1) 100%);
+}
+.services-group2{
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  margin:auto;
+  text-align:center;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+.services-group3{
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  margin:auto;
+  text-align:center;
+background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 }
 .service-icon{
   color: white;
 }
-
+.btn{
+  color: #0099CC;
+  background: transparent;
+  border: 2px solid #0099CC;
+  border-radius: 6px;
+}
 
 /* ----- Footer ----- */
 .footer-widget{

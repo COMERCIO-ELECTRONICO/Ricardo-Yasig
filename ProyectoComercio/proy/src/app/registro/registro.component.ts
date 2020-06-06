@@ -25,20 +25,16 @@ export class RegistroComponent implements OnInit {
   }
 
 
-
   ingresar(){
 
-
     if (this.pass === this.vpass) {
-
-
       this._RegistroService.crearUsuarios({
     
         usuario: this.usuario,
         email: this.email,
         password: this.pass,
-        tipousuario:'1'
        
+        
         
         }).subscribe(
           (registroCreado)=> {
@@ -53,8 +49,6 @@ export class RegistroComponent implements OnInit {
       alert('Contraseñas no validas');
       this._router.navigate(['/registro']);
     }
-
-
    
      
   }
