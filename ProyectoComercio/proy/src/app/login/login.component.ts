@@ -43,17 +43,11 @@ this.pass ='';
   }else{
 
  if(resultado[0]["nombre"]){
-
+   
  }
-
-  console.log('bienvenidp');
-
-
+ 
   alert('bienvenidos!!!')
       this._router.navigate(['/games', 'perfil']);
-
-
-   
   }
     })
   }

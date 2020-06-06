@@ -9,6 +9,10 @@ import { ProducService } from '../services/pro.service';
 })
 export class ProductoComponent implements OnInit {
 
+  refresh(): void {
+    window.location.reload();
+}
+
   string;
   titulo ='';
   clasificacion ='';
@@ -16,6 +20,7 @@ export class ProductoComponent implements OnInit {
   fabricante ='';
   version ='';
   catagolo ='';
+  imagen='';
 
   constructor(
     private readonly _router: Router,
@@ -43,13 +48,16 @@ export class ProductoComponent implements OnInit {
       consola: this.consola,
       fabricante: this.fabricante,
       version: this.version,
-      catagolo : this.catagolo
+      imagen:this.imagen
+     
        
        }).subscribe(
          (pro)=> {
            console.log('producto creado');
            console.log(pro);
-       
+       alert('producto creado')
+           this.refresh();
+
          }
        )
          }
@@ -58,18 +66,21 @@ export class ProductoComponent implements OnInit {
 
          delete(val){
    
-          this._RegisPro.eliminar((`http://localhost:1337/producto/${val.id}`))
+          this._RegisPro.eliminar((`http://localhost:1337/producto/${val}`))
           
           .subscribe((dat)=>{
-      
-            this.string = dat;
-           
+          this.string = dat;
+            alert('dato eliminado');
+            this.refresh();
           })
           
         }
 
-        editar(edit){
-
+        Editar(dato){
+          console.log('valor name')
+          console.log(dato);
+        //  this._router.navigate(['productos/'+ dato])
+          
         }
 
 

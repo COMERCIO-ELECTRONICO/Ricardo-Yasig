@@ -9,12 +9,12 @@ module.exports = {
 
   attributes: {
 
-    titulo: {type: 'string'},
-    clasificacion: {type: 'string'},
-    consola: {type: 'string'},
-    fabricante: {type: 'string'},
-    version: {type: 'string'}
-
+    titulo: { type: 'string' },
+    clasificacion: { type: 'string' },
+    consola: { type: 'string' },
+    fabricante: { type: 'string' },
+    version: { type: 'string' },
+    imagen: { type: 'string' }
   },
 
 };

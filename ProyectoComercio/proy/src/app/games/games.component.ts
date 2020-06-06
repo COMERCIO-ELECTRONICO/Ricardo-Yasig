@@ -10,6 +10,10 @@ import { Router } from '@angular/Router';
 })
 export class GamesComponent implements OnInit {
 
+  refresh(): void {
+    window.location.reload();
+}
+
   string;
 
   constructor(
@@ -47,6 +51,9 @@ export class GamesComponent implements OnInit {
     .subscribe((datos)=>{
 
       this.string = datos;
+
+      alert('dato borrado')
+      this.refresh();
      
     })
     }

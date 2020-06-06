@@ -7,7 +7,7 @@
        <!--STYLES END-->
   </head>
 
-  <body>  
+  <body class="services-group1">  
       <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
           <a class="navbar-brand" href="/">Prodcutos</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,56 +39,36 @@
 
 
 
-
-      
- 
+          <div class="row">
+            <div class="col">
         
-
-
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            
-       
-            <div class="container">
+        
               <table class="table">
-                <thead class="thead-light">
-                  <div class="col-sm-12"> <tr>Prodcutos</tr></div>
-                 
+                <thead class="thead-dark">
                   <tr>
                     <th scope="col">id</th>
-                    <th scope="col">correo</th>
-                    <th scope="col">password</th>
-                    <th scope="col">Acciones</th>
-      
+                    <th scope="col">nombre</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Pass</th>
+                    <th scope="col">eliminar</th>
+                    <th scope="col">Editar</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let name of string"  >
-                    <td>{{name.id}}</td>
-                    <td>{{name.email}}</td>
-                    <td>{{name.password}}</td>
-                    <td><button type="submit" class="btn btn-primary" (click)='eliminar(name)'>Eliminar</button>
-                      <button type="submit" class="btn btn-primary" (click)='eliminar(name)'>Editar</button>
-                    </td>
-              
-                  </tr>
-                  <tr>
+                  <tr *ngFor="let name of string">
+                    <td style="color: white;">{{name.id}}</td>
+                    <td style="color: white;">{{name.usuario}}</td>
+                    <td style="color: white;">{{name.email}}</td>
+                    <td style="color: white;">{{name.password}}</td>
                    
-                 </tr>
-                           
+                   <td> <button type="submit" class="btn btn-primary" (click)='eliminar(name)'>Eliminar</button></td>
+                   <td> <button type="submit" class="btn btn-primary" >Editar</button></td>
+                  </tr>
+        
                 </tbody>
               </table>
+        
             </div>
-
-          </div>
-
-
-
-
-
-
-
 
 
 

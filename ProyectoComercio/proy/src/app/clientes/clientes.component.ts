@@ -9,6 +9,12 @@ import { clienteService } from '../services/cliente.service';
 })
 export class ClientesComponent implements OnInit {
 
+
+  
+  refresh(): void {
+    window.location.reload();
+}
+
   string;
   credencial ='';
   nombre ='';
@@ -29,8 +35,7 @@ export class ClientesComponent implements OnInit {
 
      // console.log(JSON.stringify(listas[1]['id']));
 
-      this.string=listas;
-      
+         
 
       this.string = listas;
       this.string=this.string;
@@ -50,11 +55,42 @@ export class ClientesComponent implements OnInit {
           (registroCreado)=> {
             console.log('registroCreado');
             console.log(registroCreado);
+            alert('Cliente Agregado')
+            this.refresh();
         
           }
         )
          
   }
+
+
+  verificaUsuario(){
+
+    this._Registrocliente.listaCliente('http://localhost:1337/clientes?credencial='+this.credencial)
+ 
+    .subscribe((resultado) => {
+   
+   console.log(resultado);
+   
+  if (JSON.stringify(resultado)=='[]') {
+    
+  // alert('usuario no existe, verifique !!');
+  // this._router.navigate(['/login']);
+  alert('usuario');
+
+  }else{
+
+ if(resultado[0]['credencial']){
+ }
+  console.log('bienvenidp');
+  alert('ya existe intente con otro usuario');
+  this.agregar();
+      this.refresh();
+  }
+    })
+  }
+
+
 
 
 
@@ -65,6 +101,8 @@ export class ClientesComponent implements OnInit {
     .subscribe((datos)=>{
 
       this.string = datos;
+      alert('dato eliminado')
+      this.refresh();
      
     })
     }
@@ -73,7 +111,7 @@ export class ClientesComponent implements OnInit {
     Editar(dato){
       console.log('valor name')
       console.log(dato);
-      this._router.navigate(['cliente/'+ dato])
+      this._router.navigate(['editacli/'+ dato])
       
     }
 

@@ -12,7 +12,6 @@ import { Router } from '@angular/Router';
 export class EditaCliComponent implements OnInit {
 
  
-  add;
   contenedor;
 
 
@@ -48,7 +47,7 @@ this.telefono = imprime[0]['telefono']
 
   
   guardar(){
-    this._Registrocliente.editarcliente('http://localhost:1337/user/'+this.contenedor,{
+    this._Registrocliente.editarcliente('http://localhost:1337/clientes/'+this.id,{
       credencial:this.credencial,
       nombre:this.nombre,
       direccion:this.direccion,
