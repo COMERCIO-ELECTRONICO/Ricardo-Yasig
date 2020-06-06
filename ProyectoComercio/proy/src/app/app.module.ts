@@ -25,6 +25,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ProductoComponent } from './producto/producto.component';
 import { EditaCliComponent } from './edita-cli/edita-cli.component';
+import { EditarUsuariosComponent } from './editar-usuarios/editar-usuarios.component';
 
 
 
@@ -41,6 +42,7 @@ import { EditaCliComponent } from './edita-cli/edita-cli.component';
     NosotrosComponent,
     ProductoComponent,
     EditaCliComponent,
+    EditarUsuariosComponent,
    
  
   ],

@@ -21,6 +21,13 @@ const rutas: Routes = [
     path: 'iniciar-sesion',
     component: IniciarSesionComponent,
   },
+
+  {
+    path: 'EditaPerfil',
+    loadChildren: () =>
+    import('./perfiles/perfiles.module')
+      .then(mod => mod.PerfilesModule),
+  },
   {
     path: 'login',
     component: LoginComponent,
